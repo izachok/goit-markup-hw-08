@@ -7,6 +7,6 @@
 }
 
 //calculate width for flex-grid
-@function get-column-basis($column-num, $width: 100%, $gap: $card-gap) {
+@function get-column-basis($column-num, $width: 100%, $gap: $column-gap) {
   @return calc((#{$width} - #{$column-num} * #{$gap}) / #{$column-num});
 }

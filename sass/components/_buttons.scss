@@ -1,7 +1,5 @@
 .button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-centered(inline-flex);
   padding-top: 10px;
   padding-bottom: 10px;
   min-width: 200px;
@@ -62,9 +60,7 @@
 }
 
 .button-close {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-centered(inline-flex);
   padding: 0;
   width: 30px;
   height: 30px;

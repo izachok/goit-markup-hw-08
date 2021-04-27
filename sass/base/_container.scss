@@ -1,7 +1,20 @@
 .container {
-  width: $container-width;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0 $column-gap/2;
   margin-left: auto;
   margin-right: auto;
+
+  //temp
+  outline: 1px solid green;
+
+  @include for-phone-up {
+    width: $mobile-width;
+  }
+
+  @include for-tablet-up {
+    width: $tablet-width;
+  }
+
+  @include for-desktop-up {
+    width: $desktop-width;
+  }
 }

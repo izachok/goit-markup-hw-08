@@ -1,29 +1,30 @@
 @import './utils/variables';
 @import './utils/functions';
 @import './utils/mixins';
+@import './utils/media-mixins';
 @import './utils/placeholders';
-@import './utils/visually-hidden';
+@import './base/visually-hidden';
 @import './base/common';
 @import './base/page-container';
 @import './base/container';
 
-@import './components/icon';
+// @import './components/icon';
 @import './components/section';
-@import './components/logo';
-@import './components/menu-link';
+// @import './components/logo';
+// @import './components/menu-link';
 @import './components/buttons';
-@import './components/socials';
-@import './components/backdrop';
-@import './components/modal';
-@import './components/forms';
-@import './components/portfolio-card';
+// @import './components/socials';
+// @import './components/backdrop';
+// @import './components/modal';
+// @import './components/forms';
+// @import './components/portfolio-card';
 
-@import './layout/page-header';
+// @import './layout/page-header';
 @import './layout/hero';
-@import './layout/features';
-@import './layout/work';
-@import './layout/team';
-@import './layout/clients';
-@import './layout/page-footer';
+// @import './layout/features';
+// @import './layout/work';
+// @import './layout/team';
+// @import './layout/clients';
+// @import './layout/page-footer';
 
-@import './layout/portfolio';
+// @import './layout/portfolio';

@@ -3,14 +3,20 @@
   background-color: $bg-color;
 }
 
-@mixin elements-set($gap: $card-gap) {
+@mixin elements-set($gap: $column-gap) {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: -1 * $gap;
   margin-right: -1 * $gap;
 }
 
-@mixin element($gap: $card-gap) {
+@mixin element($gap: $column-gap) {
   margin-right: $gap;
   margin-bottom: $gap;
+}
+
+@mixin flex-centered($display: flex) {
+  display: $display;
+  justify-content: center;
+  align-items: center;
 }
