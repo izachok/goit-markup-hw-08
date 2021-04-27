@@ -1,17 +1,32 @@
 .features__list {
   @extend %list;
-  @include elements-set;
+
+  @include for-tablet-up {
+    @include elements-set;
+  }
 }
 
 .features__list-item {
-  @include element;
-  flex-basis: get-column-basis(4);
+  &:not(:last-child) {
+    @include for-phone-only {
+      margin-bottom: $column-gap;
+    }
+  }
+
+  @include for-tablet-up {
+    @include element;
+    flex-basis: get-column-basis(2);
+  }
+
+  @include for-desktop-up {
+    flex-basis: get-column-basis(4);
+  }
 }
 
 .features__item-wrapper {
-  @extend %flex-centered;
+  @include flex-centered;
   height: 120px;
-  margin-bottom: 30px;
+  margin-bottom: $column-gap;
   @include set-colors($title-text-color, $shadow-bg-color);
   border-radius: 4px;
 }

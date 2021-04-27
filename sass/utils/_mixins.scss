@@ -6,14 +6,24 @@
 @mixin elements-set($gap: $column-gap) {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: -1 * $gap;
-  margin-right: -1 * $gap;
+  margin: $gap / -2;
 }
 
 @mixin element($gap: $column-gap) {
-  margin-right: $gap;
-  margin-bottom: $gap;
+  margin: $gap / 2;
 }
+
+// @mixin elements-set($gap: $column-gap) {
+//   display: flex;
+//   flex-wrap: wrap;
+//   margin-bottom: -1 * $gap;
+//   margin-right: -1 * $gap;
+// }
+
+// @mixin element($gap: $column-gap) {
+//   margin-right: $gap;
+//   margin-bottom: $gap;
+// }
 
 @mixin flex-centered($display: flex) {
   display: $display;
