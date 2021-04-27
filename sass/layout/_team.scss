@@ -1,0 +1,39 @@
+.team {
+  background-color: $shadow-bg-color;
+}
+
+.team__list {
+  @extend %list;
+  @include elements-set;
+}
+
+.team__list-item {
+  @include element;
+  flex-basis: get-column-basis(4);
+  overflow: hidden;
+  box-shadow: $standart-shadow;
+  border-radius: 0px 0px 4px 4px;
+  background-color: $primary-white-color;
+}
+
+.team__wrap {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+%team-font {
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+}
+
+.team__subtitle {
+  @extend %team-font;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.team__descr {
+  @extend %team-font;
+  margin-bottom: 16px;
+}

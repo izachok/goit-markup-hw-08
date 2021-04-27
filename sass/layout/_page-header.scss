@@ -1,0 +1,25 @@
+.page-header {
+  border-bottom: 1px solid #ececec;
+}
+
+.page-header__wrap,
+.page-header__inner-wrap-nav {
+  @extend %flex-centered;
+}
+
+.page-header__site-nav,
+.page-header__auth-nav {
+  @extend %list;
+  display: flex;
+}
+
+.page-header__auth-nav {
+  margin-left: auto;
+}
+
+.page-header__list-item {
+  position: relative;
+}
+.page-header__list-item:not(:last-child) {
+  margin-right: 50px;
+}

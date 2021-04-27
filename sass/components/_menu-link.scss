@@ -1,0 +1,42 @@
+.menu-link {
+  @extend %link;
+  @extend %flex-centered;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: $title-text-color;
+  fill: currentColor;
+
+  transition: get-transition-prop(color);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.menu-link--current {
+  color: $accent-color;
+
+  &::after {
+    position: absolute;
+    bottom: -1px;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: $accent-color;
+    border-radius: 2px;
+  }
+}
+
+.menu-link--shadowed {
+  color: $primary-text-color;
+}
+
+.menu-link__icon {
+  margin-right: 10px;
+}

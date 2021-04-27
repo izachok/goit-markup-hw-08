@@ -1,0 +1,30 @@
+.clients__list {
+  @extend %list;
+  @include elements-set;
+}
+
+.clients__list-item {
+  @include element;
+  height: 90px;
+  flex-basis: get-column-basis(6);
+}
+
+.clients__item {
+  @extend %flex-centered;
+  width: 100%;
+  height: 100%;
+  border: 1px solid $icons-color;
+  border-radius: 4px;
+  color: $icons-color;
+  transition: get-transition-prop(color), get-transition-prop(border-color);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    border-color: $accent-color;
+  }
+}
+
+// .clients__icon {
+//   fill: currentColor;
+// }

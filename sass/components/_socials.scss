@@ -1,0 +1,35 @@
+.social {
+  @extend %list;
+  display: inline-flex;
+}
+
+.social__container {
+  @extend %flex-centered;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transition: get-transition-prop(color), get-transition-prop(background-color);
+  @include set-colors($icons-color, transparent);
+
+  &:hover,
+  &:focus {
+    @include set-colors($primary-white-color, $accent-color);
+  }
+}
+
+.social__list-item {
+  width: 44px;
+  height: 44px;
+}
+
+.social__list-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social__icon {
+  fill: currentColor;
+}
+
+.social__container--gray {
+  @include set-colors($primary-white-color, rgba($primary-white-color, 0.1));
+}

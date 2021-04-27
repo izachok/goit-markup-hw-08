@@ -1,0 +1,12 @@
+@function get-transition-prop(
+  $property-name,
+  $function-time: $animation-time,
+  $function: $animation-function
+) {
+  @return $property-name $function-time $function;
+}
+
+//calculate width for flex-grid
+@function get-column-basis($column-num, $width: 100%, $gap: $card-gap) {
+  @return calc((#{$width} - #{$column-num} * #{$gap}) / #{$column-num});
+}

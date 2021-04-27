@@ -1,0 +1,16 @@
+@mixin set-colors($color, $bg-color) {
+  color: $color;
+  background-color: $bg-color;
+}
+
+@mixin elements-set($gap: $card-gap) {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: -1 * $gap;
+  margin-right: -1 * $gap;
+}
+
+@mixin element($gap: $card-gap) {
+  margin-right: $gap;
+  margin-bottom: $gap;
+}

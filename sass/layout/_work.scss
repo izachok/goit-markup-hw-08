@@ -1,0 +1,26 @@
+.work {
+  padding-top: 0;
+}
+
+.work__list {
+  @extend %list;
+  @include elements-set;
+}
+
+.work__item {
+  @include element;
+  flex-basis: get-column-basis(3);
+  position: relative;
+}
+
+.work__title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  margin-bottom: 0;
+  text-align: center;
+  @include set-colors($primary-white-color, rgba($secondary-bg-color, 0.8));
+}

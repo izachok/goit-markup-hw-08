@@ -1,0 +1,23 @@
+.features__list {
+  @extend %list;
+  @include elements-set;
+}
+
+.features__list-item {
+  @include element;
+  flex-basis: get-column-basis(4);
+}
+
+.features__item-wrapper {
+  @extend %flex-centered;
+  height: 120px;
+  margin-bottom: 30px;
+  @include set-colors($title-text-color, $shadow-bg-color);
+  border-radius: 4px;
+}
+
+.features__text {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}

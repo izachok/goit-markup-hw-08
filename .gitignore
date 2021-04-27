@@ -102,3 +102,8 @@ dist
 
 # TernJS port file
 .tern-port
+
+# user added
+.prettierrc.json
+.vs
+.vscode/

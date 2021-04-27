@@ -1,0 +1,19 @@
+.portfolio__filter-list {
+  @extend %list;
+  @extend %flex-centered;
+  margin-bottom: 50px;
+}
+
+.portfolio__filter-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.portfolio__cards {
+  @extend %list;
+  @include elements-set;
+}
+
+.portfolio__cards-item {
+  @include element;
+  flex-basis: get-column-basis(3);
+}

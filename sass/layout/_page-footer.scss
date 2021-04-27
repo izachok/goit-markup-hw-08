@@ -1,0 +1,51 @@
+.page-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $secondary-bg-color;
+}
+
+.page-footer__container {
+  display: flex;
+  align-items: baseline;
+}
+
+.page-footer__inner-wrap {
+  width: 270px;
+  margin-right: $card-gap;
+}
+
+.page-footer__logo {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.page-footer__address {
+  display: flex;
+  flex-direction: column;
+  font-style: inherit;
+}
+
+.page-footer__text {
+  font-size: 14px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  color: $primary-white-color;
+}
+
+.page-footer__link {
+  @extend %link;
+  @extend .page-footer__text;
+  margin-top: 9px;
+  color: $secondary-white-color;
+
+  transition: get-transition-prop(color);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.page-footer__form-container {
+  flex-grow: 2;
+}

@@ -1,0 +1,81 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  min-width: 200px;
+  min-height: 50px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  border: none;
+  border-radius: 4px;
+  // color: inherit;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba($black-color, 0.15);
+  @include set-colors($primary-white-color, $accent-color);
+  transition: get-transition-prop(background-color), get-transition-prop(color);
+
+  &:hover,
+  &:focus {
+    @include set-colors($title-text-color, $shadow-bg-color);
+  }
+}
+
+.button__icon {
+  fill: currentColor;
+  margin-left: 10px;
+}
+
+.button--small {
+  $button-shadow: 0px 3px 1px rgba($black-color, 0.1),
+    0px 1px 2px rgba($black-color, 0.08), 0px 2px 2px rgba($black-color, 0.12);
+
+  min-height: 38px;
+  min-width: 44px;
+  padding: 6px 22px;
+  font-weight: 500;
+  line-height: 1.63;
+  letter-spacing: 0.03em;
+  border: none;
+  box-shadow: $button-shadow;
+
+  transition: get-transition-prop(background-color), get-transition-prop(color);
+
+  &:hover,
+  &:focus {
+    box-shadow: $button-shadow;
+  }
+}
+
+.button--secondary {
+  @include set-colors($title-text-color, $shadow-bg-color);
+  box-shadow: none;
+
+  &:hover,
+  &:focus {
+    @include set-colors($primary-white-color, $accent-color);
+  }
+}
+
+.button-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba($black-color, 0.1);
+  border-radius: 50%;
+  background-color: $primary-white-color;
+  transition: get-transition-prop(color);
+  box-shadow: none;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}

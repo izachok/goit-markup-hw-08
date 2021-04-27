@@ -1,0 +1,135 @@
+.form-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.form-field__label {
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+}
+
+%form-field__input {
+  border: 1px solid rgba($title-text-color, 0.2);
+  border-radius: 4px;
+
+  &::placeholder {
+    color: rgba($primary-text-color, 0.5);
+  }
+
+  &:focus {
+    border-color: $accent-color;
+  }
+}
+
+.form-field__input {
+  @extend %form-field__input;
+  height: 40px;
+  padding: 11px;
+  padding-left: 42px;
+}
+
+.form-field__textarea {
+  @extend %form-field__input;
+  padding: 12px 16px;
+  height: 120px;
+  resize: none;
+}
+
+.form-field__icon {
+  position: absolute;
+  bottom: 11px;
+  left: 12px;
+  fill: $title-text-color;
+  transition: get-transition-prop(color);
+
+  .form-field:focus-within & {
+    fill: $accent-color;
+  }
+}
+
+.form-field--last {
+  margin-bottom: 20px;
+}
+
+.form-field-checkbox {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.form-field-checkbox__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.form-field-checkbox__check {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+  border: 1px solid $title-text-color;
+  border-radius: 2px;
+
+  .form-field-checkbox__input:checked + & {
+    border-color: transparent;
+    background-color: $accent-color;
+  }
+}
+
+.form-field-checkbox__icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  opacity: 0;
+  fill: $primary-white-color;
+  transition: get-transition-prop(opacity);
+
+  .form-field-checkbox__input:checked ~ & {
+    opacity: 1;
+  }
+}
+
+.form-field-checkbox__label {
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+//subscribe form
+.subscribe-form {
+  display: flex;
+  width: 100%;
+}
+
+.subscribe-form__field-input {
+  height: 50px;
+  padding: 15px;
+  margin-right: 12px;
+  flex-grow: 1;
+  border: 1px solid rgba($primary-white-color, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba($black-color, 0.15));
+  border-radius: 4px;
+  @include set-colors($primary-white-color, transparent);
+
+  &::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: $secondary-white-color;
+  }
+}
