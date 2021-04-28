@@ -1,0 +1,25 @@
+.auth-nav {
+  //align-items: center;
+  @include for-tablet-down {
+    flex-direction: column;
+  }
+}
+
+.auth-nav__list-item {
+  position: relative;
+
+  @include for-desktop-up {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+}
+
+.auth-nav__menu-link {
+  @include for-tablet-down {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 12px;
+    line-height: 1.17;
+  }
+}
