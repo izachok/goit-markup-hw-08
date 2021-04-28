@@ -10,6 +10,12 @@
   }
 }
 
+@mixin for-tablet-down {
+  @media screen and (max-width: $desktop-width - 1) {
+    @content;
+  }
+}
+
 @mixin for-phone-up {
   @media screen and (min-width: $mobile-width) {
     @content;

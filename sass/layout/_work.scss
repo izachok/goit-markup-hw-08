@@ -1,5 +1,9 @@
 .work {
   padding-top: 0;
+
+  @include for-tablet-down {
+    display: none;
+  }
 }
 
 .work__list {

@@ -4,22 +4,40 @@
 
 .team__list {
   @extend %list;
-  @include elements-set;
+  @include for-tablet-up {
+    @include elements-set;
+  }
 }
 
 .team__list-item {
-  @include element;
-  flex-basis: get-column-basis(4);
   overflow: hidden;
   box-shadow: $standart-shadow;
   border-radius: 0px 0px 4px 4px;
   background-color: $primary-white-color;
+
+  &:not(:last-child) {
+    @include for-phone-only {
+      margin-bottom: $column-gap;
+    }
+  }
+
+  @include for-tablet-up {
+    @include element;
+    flex-basis: get-column-basis(2);
+  }
+
+  @include for-desktop-up {
+    flex-basis: get-column-basis(4);
+  }
 }
 
 .team__wrap {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 30px 15px 24px;
   text-align: center;
+
+  @include for-desktop-up {
+    padding-bottom: 30px;
+  }
 }
 
 %team-font {

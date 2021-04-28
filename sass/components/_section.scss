@@ -9,7 +9,7 @@
 }
 
 .section__title {
-  margin-bottom: 30px;
+  margin-bottom: $column-gap;
   font-weight: 700;
   font-size: 28px;
   line-height: 1.17;
@@ -36,7 +36,13 @@
   }
 }
 
-// .section__subtitle--inverse {
-//   margin-bottom: 20px;
-//   color: $primary-white-color;
-// }
+.section__subtitle--inverse {
+  margin-bottom: 20px;
+  color: $primary-white-color;
+}
+
+.section__subtitle--centered {
+  @include for-tablet-down {
+    text-align: center;
+  }
+}
