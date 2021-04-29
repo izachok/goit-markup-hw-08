@@ -21,7 +21,7 @@
   <body class="page-container">
     <div class="page-container__body">
       <header class="page-header">
-        <div class="container">
+        <div class="container page-header__container">
           <div class="page-header__wrap">
             <a href="./index.html" class="logo page-header__logo">
               <span class="logo__accent">Web</span>Studio</a
@@ -79,21 +79,95 @@
             </div>
             <button
               type="button"
-              class="mobile-menu__button"
+              class="burger-menu__button"
               aria-label="Переключатель меню сайта"
               data-menu-button
             >
-              <svg width="24" height="24">
+              <svg class="burger-menu__icon icon" width="40" height="40">
                 <use
-                  class="mobile-menu__icon-cross"
+                  class="burger-menu__icon-cross"
                   href="./images/icons.svg#icon-cross"
                 ></use>
                 <use
-                  class="mobile-menu__icon-menu"
+                  class="burger-menu__icon-menu"
                   href="./images/icons.svg#icon-menu"
                 ></use>
               </svg>
             </button>
+          </div>
+          <div class="menu-burger__container" data-menu>
+            <ul class="menu-burger__nav">
+              <li class="menu-burger__nav-item">
+                <a
+                  href="./index.html"
+                  class="menu-burger__nav-link menu-burger__nav-link--current"
+                  >Студия</a
+                >
+              </li>
+              <li class="menu-burger__nav-item">
+                <a href="./portfolio.html" class="menu-burger__nav-link"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="menu-burger__nav-item">
+                <a href="" class="menu-burger__nav-link">Контакты</a>
+              </li>
+            </ul>
+            <ul class="menu-burger__contacts">
+              <li class="menu-burger__contact-item">
+                <a
+                  href="tel:+380961111111"
+                  class="menu-burger__contact-link menu-burger__contact-link--accent"
+                >
+                  +38 096 111 11 11
+                </a>
+              </li>
+              <li class="menu-burger__contact-item">
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="menu-burger__contact-link"
+                  >info@devstudio.com
+                </a>
+              </li>
+            </ul>
+            <ul class="menu-burger__socials">
+              <li class="menu-burger__social-item">
+                <a
+                  href="http://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="menu-burger__social-link"
+                  >Instagram</a
+                >
+              </li>
+              <li class="menu-burger__social-item">
+                <a
+                  href="http://twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="menu-burger__social-link"
+                  >Twitter</a
+                >
+              </li>
+              <li class="menu-burger__social-item">
+                <a
+                  href="http://facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="menu-burger__social-link"
+                  >Facebook</a
+                >
+              </li>
+              <li class="menu-burger__social-item">
+                <a
+                  href="http://linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="menu-burger__social-link"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
           </div>
         </div>
       </header>
@@ -765,7 +839,7 @@
     </footer>
 
     <!-- modal window -->
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button
           type="button"
@@ -833,7 +907,7 @@
               ></textarea>
             </label>
 
-            <div>
+            <div class="form-field__outer-wrap">
               <label class="form-field-checkbox">
                 <input
                   type="checkbox"
@@ -841,7 +915,6 @@
                   name="agreement"
                   required
                 />
-                <span class="form-field-checkbox__check"></span>
                 <svg
                   class="form-field-checkbox__icon"
                   width="16"
@@ -861,7 +934,7 @@
           </form>
         </div>
       </div>
-    </div> -->
+    </div>
     <script src="./js/modal.js"></script>
     <script src="./js/menu.js"></script>
   </body>

@@ -1,0 +1,140 @@
+.burger-menu__button {
+  @include flex-centered;
+  position: relative;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  background-color: inherit;
+  color: $black-color;
+
+  transition: get-transition-prop(color), get-transition-prop(opacity);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
+  & .burger-menu__icon-cross {
+    display: none;
+  }
+  &.is-open .burger-menu__icon-cross {
+    display: block;
+  }
+
+  &.is-open .burger-menu__icon-menu {
+    display: none;
+  }
+
+  @include for-tablet-up {
+    display: none;
+  }
+}
+
+.menu-burger__container {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  min-height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 48px 40px;
+  overflow: auto;
+
+  background-color: $primary-white-color;
+  border: 1px solid $primary-text-color;
+
+  transform: translateY(-100%);
+  transition: get-transition-prop(transform);
+
+  @include for-phone-only {
+    &.is-open {
+      transform: translateY(0);
+    }
+  }
+}
+.menu-burger__nav {
+  @extend %list;
+  margin-bottom: 64px;
+}
+.menu-burger__nav-item,
+.menu-burger__contact-item {
+  &:not(:last-child) {
+    padding-bottom: 32px;
+  }
+}
+.menu-burger__nav-link {
+  @extend %link;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: $title-text-color;
+
+  transition: get-transition-prop(color);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+.menu-burger__nav-link--current {
+  color: $accent-color;
+}
+.menu-burger__contacts {
+  @extend %list;
+  margin-bottom: 64px;
+  margin-top: auto;
+}
+
+.menu-burger__contact-link {
+  @extend %link;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: $primary-text-color;
+}
+
+.menu-burger__contact-link--accent {
+  @extend %link;
+  font-size: 34px;
+  color: $accent-color;
+}
+
+.menu-burger__socials {
+  @extend %list;
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 454px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.menu-burger__social-item {
+  @media screen and (min-width: 455px) {
+    &:not(:last-child)::after {
+      content: '';
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px;
+      height: 22px;
+      width: 1px;
+      vertical-align: middle;
+      background-color: rgba($title-text-color, 0.2);
+    }
+  }
+}
+.menu-burger__social-link {
+  @extend %link;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+}

@@ -2,6 +2,11 @@
   border-bottom: 1px solid #ececec;
 }
 
+.page-header__container {
+  position: relative;
+  z-index: 0;
+}
+
 .page-header__logo {
   @include for-tablet-up {
     margin-right: 88px;
@@ -16,8 +21,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  @include for-phone-only {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
 }
 
 .page-header__menu-wrap {
@@ -48,31 +55,5 @@
   position: relative;
   &:not(:last-child) {
     margin-right: 50px;
-  }
-}
-
-//-------------------mobile menu
-//todo: move to new file
-.mobile-menu__button {
-  @include flex-centered;
-  width: 40px;
-  height: 40px;
-  padding: 0;
-  border: none;
-  background-color: inherit;
-
-  & .mobile-menu__icon-cross {
-    display: none;
-  }
-  &.is-open .mobile-menu__icon-cross {
-    display: block;
-  }
-
-  &.is-open .mobile-menu__icon-menu {
-    display: none;
-  }
-
-  @include for-tablet-up {
-    display: none;
   }
 }

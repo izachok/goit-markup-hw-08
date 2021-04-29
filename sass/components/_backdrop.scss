@@ -6,7 +6,9 @@
   height: 100%;
   background-color: rgba($black-color, 0.2);
   opacity: 1;
+
   visibility: visible;
+  // overflow: auto;
 
   transition: get-transition-prop(opacity), get-transition-prop(visibility);
 }
