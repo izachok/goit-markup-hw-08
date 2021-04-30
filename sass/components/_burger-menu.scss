@@ -1,7 +1,7 @@
 .burger-menu__button {
   @include flex-centered;
   position: relative;
-  z-index: 2;
+  z-index: 10;
   width: 40px;
   height: 40px;
   padding: 0;
@@ -34,7 +34,7 @@
 
 .menu-burger__container {
   position: absolute;
-  z-index: 1;
+  z-index: 9;
   top: 0;
   left: 0;
   width: 100%;

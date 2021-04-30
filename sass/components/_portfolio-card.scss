@@ -1,9 +1,19 @@
+.portfolio-card {
+  height: 100%;
+}
+
 .portfolio-card__link {
   display: block;
   box-shadow: none;
   transition: get-transition-prop(box-shadow);
   color: inherit;
   text-decoration: none;
+
+  @include for-tablet-up {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 
   &:hover,
   &:focus {
@@ -14,12 +24,17 @@
 
 .portfolio-card__photo-thumb {
   position: relative;
+  z-index: 0;
   overflow: hidden;
+  // @include for-tablet-up {
+  //   flex-grow: 0;
+  // }
 }
 
 .portfolio-card__overlay {
   position: absolute;
-  top: 0;
+  z-index: 1;
+  top: 1px;
   left: 0;
   display: flex;
   align-items: center;
@@ -49,6 +64,10 @@
   padding: 20px 24px;
   border: 1px solid #eeeeee;
   border-top: none;
+
+  @include for-tablet-up {
+    flex-grow: 1;
+  }
 }
 
 .portfolio-card__title {
