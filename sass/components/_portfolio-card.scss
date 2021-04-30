@@ -34,7 +34,8 @@
 .portfolio-card__overlay {
   position: absolute;
   z-index: 1;
-  top: 0;
+  //shift to 1px added because of bug with 1px visibity of hidden overlay
+  top: 1px;
   left: 0;
   display: flex;
   align-items: center;
@@ -51,7 +52,8 @@
 
   .portfolio-card__link:hover &,
   .portfolio-card__link:focus & {
-    transform: translateY(0);
+    //shift to 1px added because of bug with 1px visibity of hidden overlay
+    transform: translateY(-1px);
   }
 }
 
