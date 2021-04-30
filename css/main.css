@@ -881,7 +881,7 @@ h6 {
 .portfolio-card__overlay {
   position: absolute;
   z-index: 1;
-  top: 1px;
+  top: 0;
   left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
