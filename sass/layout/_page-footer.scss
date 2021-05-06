@@ -11,6 +11,10 @@
     @include elements-set;
     align-items: baseline;
   }
+
+  @include for-desktop-up {
+    text-align: left;
+  }
 }
 
 .page-footer__inner-wrap {

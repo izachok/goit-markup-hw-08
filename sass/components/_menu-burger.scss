@@ -1,4 +1,4 @@
-.burger-menu__button {
+.menu-burger__button {
   @include flex-centered;
   position: relative;
   z-index: 10;
@@ -16,14 +16,14 @@
     color: $accent-color;
   }
 
-  & .burger-menu__icon-cross {
+  & .menu-burger__icon-cross {
     display: none;
   }
-  &.is-open .burger-menu__icon-cross {
+  &.is-open .menu-burger__icon-cross {
     display: block;
   }
 
-  &.is-open .burger-menu__icon-menu {
+  &.is-open .menu-burger__icon-menu {
     display: none;
   }
 
@@ -105,6 +105,12 @@
   @extend %link;
   font-size: 34px;
   color: $accent-color;
+}
+
+.menu-burger__contact-link--small {
+  @media screen and (max-width: 378px) {
+    font-size: 26px;
+  }
 }
 
 .menu-burger__socials {

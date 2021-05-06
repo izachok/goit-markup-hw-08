@@ -185,7 +185,7 @@ h6 {
   color: #ffffff;
 }
 
-.burger-menu__button {
+.menu-burger__button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -207,24 +207,24 @@ h6 {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.burger-menu__button:hover, .burger-menu__button:focus {
+.menu-burger__button:hover, .menu-burger__button:focus {
   color: #2196f3;
 }
 
-.burger-menu__button .burger-menu__icon-cross {
+.menu-burger__button .menu-burger__icon-cross {
   display: none;
 }
 
-.burger-menu__button.is-open .burger-menu__icon-cross {
+.menu-burger__button.is-open .menu-burger__icon-cross {
   display: block;
 }
 
-.burger-menu__button.is-open .burger-menu__icon-menu {
+.menu-burger__button.is-open .menu-burger__icon-menu {
   display: none;
 }
 
 @media screen and (min-width: 768px) {
-  .burger-menu__button {
+  .menu-burger__button {
     display: none;
   }
 }
@@ -309,6 +309,12 @@ h6 {
 .menu-burger__contact-link--accent {
   font-size: 34px;
   color: #2196f3;
+}
+
+@media screen and (max-width: 378px) {
+  .menu-burger__contact-link--small {
+    font-size: 26px;
+  }
 }
 
 .menu-burger__socials {
@@ -1405,6 +1411,12 @@ h6 {
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-footer__container {
+    text-align: left;
   }
 }
 
