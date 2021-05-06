@@ -15,10 +15,10 @@
   border-radius: 0px 0px 4px 4px;
   background-color: $primary-white-color;
 
-  &:not(:last-child) {
-    @include for-phone-only {
+  @include for-phone-only {
+    max-width: 450px;
+    &:not(:last-child) {
       margin-bottom: $column-gap;
-      max-width: 450px;
     }
   }
 
@@ -32,25 +32,8 @@
   }
 }
 
-.team__photo-wrap {
-  max-width: 450px;
-  max-height: 460px;
-  overflow: hidden;
-
-  @include for-tablet-up {
-    max-width: none;
-    max-height: 374px;
-  }
-  @include for-desktop-up {
-    max-height: 260px;
-  }
-}
-
 .team__photo {
-  height: 100%;
   width: 100%;
-  object-fit: cover;
-  object-position: top;
 }
 
 .team__wrap {

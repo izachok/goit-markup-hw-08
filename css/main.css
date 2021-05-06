@@ -1277,9 +1277,11 @@ h6 {
 }
 
 @media screen and (max-width: 767px) {
+  .team__list-item {
+    max-width: 450px;
+  }
   .team__list-item:not(:last-child) {
     margin-bottom: 30px;
-    max-width: 450px;
   }
 }
 
@@ -1298,32 +1300,8 @@ h6 {
   }
 }
 
-.team__photo-wrap {
-  max-width: 450px;
-  max-height: 460px;
-  overflow: hidden;
-}
-
-@media screen and (min-width: 768px) {
-  .team__photo-wrap {
-    max-width: none;
-    max-height: 374px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .team__photo-wrap {
-    max-height: 260px;
-  }
-}
-
 .team__photo {
-  height: 100%;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: top;
-     object-position: top;
 }
 
 .team__wrap {
