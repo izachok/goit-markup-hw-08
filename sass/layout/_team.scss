@@ -18,6 +18,7 @@
   &:not(:last-child) {
     @include for-phone-only {
       margin-bottom: $column-gap;
+      max-width: 450px;
     }
   }
 
@@ -29,6 +30,27 @@
   @include for-desktop-up {
     flex-basis: get-column-basis(4);
   }
+}
+
+.team__photo-wrap {
+  max-width: 450px;
+  max-height: 400px;
+  overflow: hidden;
+
+  @include for-tablet-up {
+    max-width: none;
+    max-height: 374px;
+  }
+  @include for-desktop-up {
+    max-height: 260px;
+  }
+}
+
+.team__photo {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
 }
 
 .team__wrap {

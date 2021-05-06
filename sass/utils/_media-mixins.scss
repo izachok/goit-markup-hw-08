@@ -16,14 +16,14 @@
   }
 }
 
-@mixin for-phone-up {
-  @media screen and (min-width: $mobile-width) {
+@mixin for-phone-up($shift: 0) {
+  @media screen and (min-width: $mobile-width+$shift) {
     @content;
   }
 }
 
-@mixin for-tablet-up {
-  @media screen and (min-width: $tablet-width) {
+@mixin for-tablet-up($shift: 0) {
+  @media screen and (min-width: $tablet-width+$shift) {
     @content;
   }
 }
