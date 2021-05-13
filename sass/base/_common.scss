@@ -5,6 +5,12 @@ body {
   &.modal-open {
     overflow: hidden;
   }
+
+  @include for-phone-only {
+    &.menu-open {
+      overflow: hidden;
+    }
+  }
 }
 
 img {
