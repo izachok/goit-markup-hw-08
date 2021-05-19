@@ -22,7 +22,7 @@
   }
 
   &:focus {
-    border-color: $accent-color;
+    outline-color: $accent-color;
   }
 }
 
@@ -92,6 +92,10 @@
     border-color: transparent;
     background-color: $accent-color;
     opacity: 1;
+  }
+
+  .form-field-checkbox__input:focus + & {
+    border-color: $accent-color;
   }
 }
 

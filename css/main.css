@@ -694,7 +694,7 @@ h6 {
 }
 
 .form-field__input:focus, .form-field__textarea:focus {
-  border-color: #2196f3;
+  outline-color: #2196f3;
 }
 
 .form-field__input {
@@ -769,6 +769,10 @@ h6 {
   border-color: transparent;
   background-color: #2196f3;
   opacity: 1;
+}
+
+.form-field-checkbox__input:focus + .form-field-checkbox__icon {
+  border-color: #2196f3;
 }
 
 .form-field-checkbox__label {
